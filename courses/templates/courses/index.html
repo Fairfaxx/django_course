@@ -1,0 +1,12 @@
+<h1>Courses</h1>
+
+{% for course in courses.all %}
+<div class="course">
+  <h2>{{ course.summary }}</h2>
+  <img
+    href="{{ course.image }}"
+    alt="{{ course.summary }}"
+    class="course-image"
+  />
+</div>
+{% endfor %}
