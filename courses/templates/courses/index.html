@@ -76,7 +76,11 @@
               development and clean, pragmatic design.
             </p>
             <p>
-              <a href="#" class="btn btn-primary my-2">Email us</a>
+              <a
+                href="mailto:fede.lemaire@gmail.com"
+                class="btn btn-primary my-2"
+                >Email us</a
+              >
             </p>
           </div>
           <img
@@ -93,7 +97,7 @@
             <div class="col">
               <div class="card shadow-sm">
                 <img
-                  src="{{ course.image }}"
+                  src="{{ MEDIA_URL }}{{ course.image.name }}"
                   alt="{{ course.summary }}"
                   class="bd-placeholder-img card-img-top"
                   width="100%"
@@ -104,20 +108,6 @@
                   <div
                     class="d-flex justify-content-between align-items-center"
                   >
-                    <div class="btn-group">
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        class="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
                     <small class="text-muted">9 mins</small>
                   </div>
                 </div>
