@@ -70,23 +70,13 @@
           class="col d-flex justify-content-center flex-column align-items-center"
         >
           <div class="col-lg-6 col-md-8 mx-auto">
-            <h1 class="fw-light">Django Courses</h1>
-            <p class="lead text-muted">
-              Django is a high-level Python Web framework that encourages rapid
-              development and clean, pragmatic design.
-            </p>
+            <h1 class="fw-light">Course Detail</h1>
+            <p class="lead text-muted">{{course.summary}}</p>
+            <img src="{{course.image.url }}" height="300" />
             <p>
-              <a
-                href="mailto:fede.lemaire@gmail.com"
-                class="btn btn-primary my-2"
-                >Email us</a
-              >
+              <a href="{% url 'index' %}" class="btn btn-primary my-2">Back</a>
             </p>
           </div>
-          <img
-            src="{% static 'IMG_0844-min.PNG' %}"
-            class="w-25 h-25 d-flex flex-column justify-content-center align-items-center"
-          />
         </div>
       </section>
 
@@ -95,14 +85,12 @@
           <div class="row align-items-start">
             {% for course in courses.all %}
             <div class="col" style="max-height: 500px">
-              <a href="{% url 'detail' course.id %} ">
               <div class="card shadow-sm">
                 <img
                   src="{{ course.image.url }}"
                   alt="{{ course.summary }}"
                   class="card-img-top"
                 />
-              </a>
                 <div class="card-body">
                   <p class="card-text">{{ course.summary }}</p>
                   <div
